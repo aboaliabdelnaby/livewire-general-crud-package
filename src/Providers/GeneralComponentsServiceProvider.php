@@ -30,7 +30,7 @@ class GeneralComponentsServiceProvider extends ServiceProvider
         }
         //
         $this->publishes([
-            __DIR__.'/../../src/Http/CrudComponents/' => app_path('App/Http'),
+            __DIR__.'/../../src/Http/CrudComponents/' => app_path('Http/LivewireComponents'),
         ], 'CrudComponents');
     }
 }
