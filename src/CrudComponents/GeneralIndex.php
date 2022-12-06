@@ -1,7 +1,6 @@
 <?php
 
-namespace LivewireComponents\GeneralComponents\CrudComponents;
-
+namespace App\Http\CrudComponents;
 use App\Http\Traits\WithSorting;
 use Livewire\Component;
 use Livewire\WithPagination;

@@ -1,6 +1,6 @@
 <?php
 
-namespace LivewireComponents\GeneralComponents\CrudComponents;
+namespace App\Http\CrudComponents;
 
 use Livewire\Component;
 
