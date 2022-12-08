@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\GeneralComponents\Traits;
+namespace CrudComponents\Traits;
 
 trait WithSorting
 {

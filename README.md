@@ -16,10 +16,6 @@ composer require livewire-components/general-components
 
 Next, Run install artisan command to publish bootstrap scaffolding to application
 
-```bash
-php artisan livewire:general-crud
-```
-
 This command will update package.json with Bootstrap dependencies, update resources/sass and resources/js, and resources/views with authentication views like login, register, reset password request, layouts files etc.
 
 ## Build With

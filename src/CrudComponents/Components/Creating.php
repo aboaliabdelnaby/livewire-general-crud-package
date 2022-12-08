@@ -1,22 +1,20 @@
 <?php
 
-namespace App\Http\GeneralComponents\Components;
+namespace CrudComponents\Components;
 
-use App\Http\GeneralComponents\Pipelines\Pipeline;
-use App\Http\GeneralComponents\Validation\Validation;
+use CrudComponents\Validation\Validation;
 use Livewire\Component;
+use CrudComponents\Pipelines\Pipeline;
 
-abstract class Editing extends Component
+abstract class Creating extends Component
 {
     protected string $model;
+    protected string $message;
+    protected Validation $storeValidation;
     protected string $viewPath;
     protected string $routePath;
-    protected string $repository;
-    protected string $message;
-    protected Validation $updateValidation;
-    protected $query;
-    public int $editId;
 
+    protected $query;
 
     public function __construct($id = null)
     {
@@ -26,7 +24,7 @@ abstract class Editing extends Component
 
     protected function rules(): array
     {
-        return $this->updateValidation::rules();
+        return $this->storeValidation::rules();
     }
 
     public function updated($propertyName)
@@ -34,16 +32,17 @@ abstract class Editing extends Component
         $this->validateOnly($propertyName);
     }
 
-    public function update()
+    public function create()
     {
         $validatedData = $this->validate();
         try {
-            $this->updateRow($validatedData, $this->editId);
+            $this->createRow($validatedData);
         } catch (\Exception) {
             $this->emit('error', 'something error');
         }
         session()->flash('success', $this->message);
         return redirect()->route($this->routePath);
+
     }
 
     public function render()
@@ -51,8 +50,8 @@ abstract class Editing extends Component
         return view('livewire.' . $this->viewPath);
     }
 
-    protected function updateRow($data, $id)
+    protected function createRow($data)
     {
-        return $this->query->where('id', $id)->update($data);
+        return $this->query->create($data);
     }
 }

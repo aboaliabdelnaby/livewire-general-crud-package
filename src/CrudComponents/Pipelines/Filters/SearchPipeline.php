@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\GeneralComponents\Pipelines\Filters;
+namespace CrudComponents\Pipelines\Filters;
 
-use App\Http\GeneralComponents\Pipelines\PipelineFactory;
+
+use CrudComponents\Pipelines\PipelineFactory;
 
 class SearchPipeline extends PipelineFactory
 {

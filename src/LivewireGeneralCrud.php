@@ -1,10 +1,10 @@
 <?php
 
-namespace LivewireComponents\GeneralComponents;
+namespace CrudComponents;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
-use LivewireComponents\GeneralComponents\Providers\GeneralComponentsServiceProvider;
+use CrudComponents\Providers\GeneralComponentsServiceProvider;
 
 class LivewireGeneralCrud extends Command
 {

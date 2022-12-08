@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\GeneralComponents\Pipelines;
+namespace CrudComponents\Pipelines;
 
 use \Illuminate\Pipeline\Pipeline as Pipe;
 

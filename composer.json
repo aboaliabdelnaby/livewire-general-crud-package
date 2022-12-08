@@ -8,13 +8,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "LivewireComponents\\GeneralComponents\\": "src/"
+            "CrudComponents\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "LivewireComponents\\GeneralComponents\\Providers\\GeneralComponentsServiceProvider"
+                "CrudComponents\\Providers\\GeneralComponentsServiceProvider"
             ]
         }
     },

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\GeneralComponents\Components;
+namespace CrudComponent\Components;
 
-use App\Http\GeneralComponents\Pipelines\Filters\SearchPipeline;
-use App\Http\GeneralComponents\Pipelines\Filters\SortPipeline;
-use App\Http\GeneralComponents\Pipelines\Pipeline;
-use App\Http\GeneralComponents\Traits\WithSorting;
 use Livewire\Component;
 use Livewire\WithPagination;
+use CrudComponents\Pipelines\Filters\SearchPipeline;
+use CrudComponents\Pipelines\Filters\SortPipeline;
+use CrudComponents\Pipelines\Pipeline;
+use CrudComponents\Traits\WithSorting;
 
 abstract class Indexing extends Component
 {
